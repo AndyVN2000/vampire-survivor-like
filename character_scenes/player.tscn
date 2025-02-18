@@ -23,9 +23,11 @@ radius = 59.0339
 [node name="Player" type="Area2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.15, 0.15)
+position = Vector2(0.900001, 4.00001)
+scale = Vector2(0.148242, 0.171875)
 sprite_frames = SubResource("SpriteFrames_mfpa0")
-frame_progress = 0.555099
+frame = 1
+frame_progress = 0.258388
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_gvvch")
