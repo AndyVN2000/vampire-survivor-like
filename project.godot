@@ -15,6 +15,10 @@ run/main_scene="uid://bn3swm4f0wffl"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_height=640
+
 [dotnet]
 
 project/assembly_name="Vampire Survivor-like"
