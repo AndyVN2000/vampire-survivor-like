@@ -33,10 +33,16 @@ public partial class Player : Area2D
 			velocity.Y += 1;
 		}
 		
+		var animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		if (velocity.Length() > 0)
 		{
 			// Movement speed is normalized
 			velocity = velocity.Normalized() * speed;
+			animatedSprite2D.Play();
+		}
+		else
+		{
+			animatedSprite2D.Stop();
 		}
 		
 		Position += velocity * (float)delta;
