@@ -6,9 +6,10 @@ A game based on Vampire Survivors. Developed in Godot
 Map/stage
 - Basic ground texture [DONE]
 - Map bounds
-- Camera following Player
+- Camera following Player [DONE]
 
 Enemies
+- Spawns just beyond the bounds of screen
 - Health
 - Can lose health
 
