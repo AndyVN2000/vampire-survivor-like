@@ -34,12 +34,13 @@ radius = 59.0339
 script = ExtResource("1_0gj1t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0.900001, 4.00001)
-scale = Vector2(0.148242, 0.171875)
+position = Vector2(0, 3.8147e-06)
+scale = Vector2(0.0732421, 0.0839844)
 sprite_frames = SubResource("SpriteFrames_mfpa0")
 frame = 1
 frame_progress = 0.258388
 script = SubResource("CSharpScript_0gj1t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.4, 0.4)
 shape = SubResource("CircleShape2D_gvvch")

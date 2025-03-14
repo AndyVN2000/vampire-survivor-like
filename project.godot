@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Vampire Survivor-like"
-run/main_scene="uid://bn3swm4f0wffl"
+run/main_scene="uid://dmvwm8pnxfcbn"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 

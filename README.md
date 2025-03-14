@@ -9,5 +9,12 @@ Map/stage
 - Camera following Player
 
 Enemies
+- Health
+- Can lose health
 
 Upgrades
+
+Player
+- Health
+- Can lose health
+- Can auto-attack
