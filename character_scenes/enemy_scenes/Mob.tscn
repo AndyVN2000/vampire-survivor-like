@@ -1,8 +1,31 @@
-[gd_scene load_steps=2 format=3 uid="uid://drymxlgg4d4cl"]
+[gd_scene load_steps=5 format=3 uid="uid://drymxlgg4d4cl"]
+
+[ext_resource type="Texture2D" uid="uid://y510uawgjn7l" path="res://art/mob_alpha_001.png" id="1_32m57"]
+[ext_resource type="Texture2D" uid="uid://5eh3cyebtpej" path="res://art/mob_alpha_002.png" id="2_8s5vy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_twygb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_32m57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_8s5vy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_twygb"]
 
 [node name="Mob" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.046875, -0.0390623)
+scale = Vector2(0.0233459, 0.0233612)
+sprite_frames = SubResource("SpriteFrames_twygb")
+frame_progress = 0.108129
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_twygb")
