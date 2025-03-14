@@ -10,12 +10,15 @@ Map/stage
 
 Enemies
 - Spawns just beyond the bounds of screen
+-- Spawn area should follow the position of camera
 - Health
 - Can lose health
-
-Upgrades
+- Chases the player
+- Deals collision damage to player
 
 Player
 - Health
 - Can lose health
 - Can auto-attack
+
+Upgrades
