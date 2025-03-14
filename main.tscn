@@ -8,4 +8,6 @@
 [node name="Player" parent="." instance=ExtResource("1_0xm2m")]
 z_index = 1
 
-[node name="StageAlpha" parent="." instance=ExtResource("2_h2yge")]
+[node name="Stage" type="Node2D" parent="."]
+
+[node name="StageAlpha" parent="Stage" instance=ExtResource("2_h2yge")]
