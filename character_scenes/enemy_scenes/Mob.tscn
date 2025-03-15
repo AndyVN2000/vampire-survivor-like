@@ -20,6 +20,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_twygb"]
 
 [node name="Mob" type="RigidBody2D"]
+gravity_scale = 0.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.046875, -0.0390623)

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dmvwm8pnxfcbn"]
+[gd_scene load_steps=6 format=3 uid="uid://dmvwm8pnxfcbn"]
 
 [ext_resource type="PackedScene" uid="uid://bn3swm4f0wffl" path="res://character_scenes/player_scenes/player.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://bmah5mbnt8ibv" path="res://Main.cs" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cbc8ahkc6oe8s" path="res://stage_scenes/stage_alpha.tscn" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://2trd6dr2sqi5" path="res://SpawnArea.cs" id="3_h2yge"]
 
@@ -11,6 +12,7 @@ _data = {
 point_count = 5
 
 [node name="Main" type="Node"]
+script = ExtResource("1_1bvp3")
 
 [node name="Player" parent="." instance=ExtResource("1_0xm2m")]
 z_index = 1
@@ -30,3 +32,7 @@ curve = SubResource("Curve2D_0xm2m")
 
 [node name="EnemySpawnLocation" type="PathFollow2D" parent="SpawnArea/SpawnPath"]
 position = Vector2(-704, -448)
+
+[node name="EnemySpawnTimer" type="Timer" parent="SpawnArea"]
+
+[connection signal="timeout" from="SpawnArea/EnemySpawnTimer" to="." method="OnEnemySpawnTimerTimeout"]
