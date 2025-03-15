@@ -1,10 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bn3swm4f0wffl"]
+[gd_scene load_steps=6 format=3 uid="uid://bn3swm4f0wffl"]
 
 [ext_resource type="Script" uid="uid://ddveaylfiyutn" path="res://character_scenes/player_scenes/Player.cs" id="1_0gj1t"]
 [ext_resource type="Texture2D" uid="uid://dlnbo77tcnqs8" path="res://art/player_0_alpha.png" id="1_ms4p0"]
 [ext_resource type="Texture2D" uid="uid://c5vm1pb01s6h3" path="res://art/player_1_alpha.png" id="2_7ck46"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_mfpa0"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_rnlwi"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -18,15 +18,6 @@ animations = [{
 "speed": 3.0
 }]
 
-[sub_resource type="CSharpScript" id="CSharpScript_0gj1t"]
-script/source = "using Godot;
-using System;
-
-public partial class AnimatedSprite2d : AnimatedSprite2D
-{
-}
-"
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_gvvch"]
 radius = 59.0339
 
@@ -34,12 +25,9 @@ radius = 59.0339
 script = ExtResource("1_0gj1t")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 3.8147e-06)
-scale = Vector2(0.0732421, 0.0839844)
-sprite_frames = SubResource("SpriteFrames_mfpa0")
-frame = 1
-frame_progress = 0.258388
-script = SubResource("CSharpScript_0gj1t")
+position = Vector2(-1, 2)
+scale = Vector2(0.0639648, 0.0664062)
+sprite_frames = SubResource("SpriteFrames_rnlwi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.4, 0.4)
