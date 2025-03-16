@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmvwm8pnxfcbn"]
+[gd_scene load_steps=6 format=3 uid="uid://dmvwm8pnxfcbn"]
 
 [ext_resource type="PackedScene" uid="uid://bn3swm4f0wffl" path="res://character_scenes/player_scenes/player.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://bmah5mbnt8ibv" path="res://Main.cs" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cbc8ahkc6oe8s" path="res://stage_scenes/stage_alpha.tscn" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://2trd6dr2sqi5" path="res://SpawnArea.cs" id="3_h2yge"]
-[ext_resource type="PackedScene" uid="uid://cwrmn1urvscwk" path="res://utility_scenes/PlayerCamera.tscn" id="3_lquwl"]
 
 [sub_resource type="Curve2D" id="Curve2D_0xm2m"]
 _data = {
@@ -18,7 +17,7 @@ script = ExtResource("1_1bvp3")
 [node name="Player" parent="." instance=ExtResource("1_0xm2m")]
 z_index = 1
 
-[node name="PlayerCamera" parent="Player" instance=ExtResource("3_lquwl")]
+[node name="Camera2D" type="Camera2D" parent="Player"]
 
 [node name="Stage" type="Node2D" parent="."]
 
