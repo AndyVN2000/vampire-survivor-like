@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://drymxlgg4d4cl"]
+[gd_scene load_steps=6 format=3 uid="uid://drymxlgg4d4cl"]
 
+[ext_resource type="Script" uid="uid://dfa7ptxdrxf6g" path="res://character_scenes/enemy_scenes/Mob.cs" id="1_8s5vy"]
 [ext_resource type="Texture2D" uid="uid://y510uawgjn7l" path="res://art/mob_alpha_001.png" id="1_32m57"]
 [ext_resource type="Texture2D" uid="uid://5eh3cyebtpej" path="res://art/mob_alpha_002.png" id="2_8s5vy"]
 
@@ -21,6 +22,7 @@ animations = [{
 
 [node name="Mob" type="RigidBody2D"]
 gravity_scale = 0.0
+script = ExtResource("1_8s5vy")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.046875, -0.0390623)
@@ -30,3 +32,5 @@ frame_progress = 0.108129
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_twygb")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

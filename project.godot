@@ -23,6 +23,10 @@ window/size/viewport_height=640
 
 project/assembly_name="Vampire Survivor-like"
 
+[global_group]
+
+Players=""
+
 [input]
 
 move_right={
