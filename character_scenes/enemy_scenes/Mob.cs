@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Mob : RigidBody2D
+public partial class Mob : CharacterBody2D
 {
 	
 	Area2D player;
@@ -19,13 +19,9 @@ public partial class Mob : RigidBody2D
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _PhysicsProcess(double delta)
 	{
-		if (navigationAgent.IsNavigationFinished())
-		{
-			return;
-		}
-		
 		var currentAgentPos = GlobalPosition;
 		var playerPos = player.GlobalPosition;
 		Velocity = currentAgentPos.DirectionTo(playerPos) * movementSpeed;
+		MoveAndSlide();
 	}
 }

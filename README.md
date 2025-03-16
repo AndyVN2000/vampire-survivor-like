@@ -13,7 +13,7 @@ Enemies
 -- Spawn area should follow the position of camera [DONE]
 - Health
 - Can lose health
-- Chases the player
+- Chases the player [DONE]
 - Deals collision damage to player
 
 Player
