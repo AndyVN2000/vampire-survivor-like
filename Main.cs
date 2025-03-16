@@ -22,7 +22,7 @@ public partial class Main : Node
 		var enemySpawnLocation = GetNode<PathFollow2D>("SpawnArea/SpawnPath/EnemySpawnLocation");
 		enemySpawnLocation.ProgressRatio = GD.Randf();
 		
-		enemy.Position = enemySpawnLocation.Position;
+		enemy.GlobalPosition = enemySpawnLocation.GlobalPosition;
 		
 		AddChild(enemy);
 		

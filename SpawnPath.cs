@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class SpawnPath : Node2D
+public partial class SpawnPath : Path2D
 {
 	[Export]
 	public Camera2D camera;
@@ -14,7 +14,7 @@ public partial class SpawnPath : Node2D
 	public override void _Process(double delta)
 	{
 		GlobalPosition = camera.GlobalPosition;
-		GD.Print(GlobalPosition);
+		//GD.Print(GlobalPosition);
 	}
 	
 }
