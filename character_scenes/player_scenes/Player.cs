@@ -55,7 +55,7 @@ public partial class Player : Area2D
 		Position += velocity * (float)delta;
 	}
 	
-	private void OnBodyEntered()
+	private void OnBodyEntered(Node body)
 	{
 		GD.Print("BODY ENTERED");
 	}
