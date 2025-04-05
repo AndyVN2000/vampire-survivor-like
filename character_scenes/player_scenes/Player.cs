@@ -3,9 +3,16 @@ using System;
 
 public partial class Player : Area2D
 {
+	[Signal]
+	public delegate void DamageTakenEventHandler();
 
+	[ExportGroup("Player stats")]
 	[Export]
 	public int speed { get; set; } = 400;
+	[Export]
+	public int maxHealth { get; set; } = 100;
+	[Export]
+	public int currentHealth { get; set; } = 100;
 	
 	public override void _Ready()
 	{}
