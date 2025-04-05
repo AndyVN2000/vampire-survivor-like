@@ -1,13 +1,16 @@
 using Godot;
 using System;
 
-public partial class Mob : CharacterBody2D
+public partial class Mob : CharacterBody2D, Enemy
 {
 	
 	Area2D player;
 	NavigationAgent2D navigationAgent;
 	[Export]
-	int movementSpeed = 400;
+	int MovementSpeed = 400;
+	
+	int Damage = 10;
+	int Health = 100;
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -21,7 +24,22 @@ public partial class Mob : CharacterBody2D
 	{
 		var currentAgentPos = GlobalPosition;
 		var playerPos = player.GlobalPosition;
-		Velocity = currentAgentPos.DirectionTo(playerPos) * movementSpeed;
+		Velocity = currentAgentPos.DirectionTo(playerPos) * MovementSpeed;
 		MoveAndSlide();
+	}
+	
+	public int GetDamage()
+	{
+		return Damage;
+	}
+	
+	public int GetHealth()
+	{
+		return Health;
+	}
+	
+	public void ChangeHealthBy(int amount)
+	{
+		Health += amount;
 	}
 }

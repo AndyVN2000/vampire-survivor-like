@@ -8,6 +8,7 @@ public partial class HealthBar : ProgressBar
 	
 	public override void _Ready()
 	{
+		// Connect the DamageTaken signal to Update().
 		player.DamageTaken += Update;
 	}
 	
