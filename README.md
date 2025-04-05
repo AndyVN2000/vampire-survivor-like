@@ -23,7 +23,7 @@ Player
 - Can auto-attack
 
 User Interface
-- Health bar
+- Health bar [DONE]
 - Timer
 - Main menu
 
