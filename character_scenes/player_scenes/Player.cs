@@ -55,9 +55,13 @@ public partial class Player : Area2D
 		Position += velocity * (float)delta;
 	}
 	
+	/* Something entered the body of the Player.
+	If it is an enemy or enemy projectile, then emit a signal that
+	damage has been taken. */
 	private void OnBodyEntered(Node body)
 	{
 		GD.Print("BODY ENTERED");
+		EmitSignal(SignalName.DamageTaken);
 	}
 	
 }
