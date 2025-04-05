@@ -4,6 +4,6 @@ using System;
 public partial class HealthBar : ProgressBar
 {
 	[Export]
-	Player player;
+	Player player { get; set; }
 	
 }

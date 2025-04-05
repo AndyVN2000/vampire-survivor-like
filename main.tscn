@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmvwm8pnxfcbn"]
+[gd_scene load_steps=7 format=3 uid="uid://dmvwm8pnxfcbn"]
 
 [ext_resource type="PackedScene" uid="uid://bn3swm4f0wffl" path="res://character_scenes/player_scenes/player.tscn" id="1_0xm2m"]
 [ext_resource type="Script" uid="uid://bmah5mbnt8ibv" path="res://Main.cs" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://cbc8ahkc6oe8s" path="res://stage_scenes/stage_alpha.tscn" id="2_h2yge"]
 [ext_resource type="Script" uid="uid://2trd6dr2sqi5" path="res://SpawnPath.cs" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://du6yverh26ak0" path="res://user_interface/hud.tscn" id="5_lquwl"]
 
 [sub_resource type="Curve2D" id="Curve2D_0xm2m"]
 _data = {
@@ -36,4 +37,11 @@ position = Vector2(-704, -448)
 
 [node name="EnemySpawnTimer" type="Timer" parent="SpawnArea"]
 
+[node name="Hud" parent="." instance=ExtResource("5_lquwl")]
+
+[node name="HealthBar" parent="Hud" index="0" node_paths=PackedStringArray("player")]
+player = NodePath("../../Player")
+
 [connection signal="timeout" from="SpawnArea/EnemySpawnTimer" to="." method="OnEnemySpawnTimerTimeout"]
+
+[editable path="Hud"]
