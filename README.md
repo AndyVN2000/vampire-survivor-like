@@ -14,11 +14,12 @@ Enemies
 - Health
 - Can lose health
 - Chases the player [DONE]
-- Deals collision damage to player
+- Deals collision damage to player [DONE]
 
 Player
-- Health
-- Can lose health
+- Health [DONE]
+- Can lose health [DONE]
+- Game over when health reaches 0
 - Can auto-attack
 
 User Interface

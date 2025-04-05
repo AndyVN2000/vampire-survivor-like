@@ -61,7 +61,12 @@ public partial class Player : Area2D
 	private void OnBodyEntered(Node body)
 	{
 		GD.Print("BODY ENTERED");
-		EmitSignal(SignalName.DamageTaken);
+		if (body is Enemy)
+		{
+			var enemy = (Enemy) body;
+			currentHealth -= enemy.GetDamage();
+			EmitSignal(SignalName.DamageTaken);
+		}
 	}
 	
 }
