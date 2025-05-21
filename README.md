@@ -11,7 +11,7 @@ Map/stage
 Enemies
 - Spawns just beyond the bounds of screen [DONE]
 -- Spawn area should follow the position of camera [DONE]
-- Health
+- Health [DONE]
 - Can lose health
 - Chases the player [DONE]
 - Deals collision damage to player [DONE]
