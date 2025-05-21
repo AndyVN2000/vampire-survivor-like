@@ -4,11 +4,23 @@ using System;
 public partial class EnemyHealth : Node
 {
 	
-	int maxHealth;
-	int currentHealth;
+	private int _maxHealth;
+	private int _currentHealth;
 	
-	public void changeHealthBy(int amount){
-		currentHealth += amount;
+	public EnemyHealth(int maxHealth)
+	{
+		_maxHealth = maxHealth;
+		_currentHealth = maxHealth;
+	}
+	
+	public void changeHealthBy(int amount)
+	{
+		_currentHealth += amount;
+	}
+	
+	public bool isFull()
+	{
+		return _currentHealth == _maxHealth;
 	}
 	
 }

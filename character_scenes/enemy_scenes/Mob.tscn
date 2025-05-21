@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://drymxlgg4d4cl"]
 
 [ext_resource type="Script" uid="uid://dfa7ptxdrxf6g" path="res://character_scenes/enemy_scenes/Mob.cs" id="1_8s5vy"]
-[ext_resource type="Texture2D" uid="uid://v3vxqb3rs8fy" path="res://art/mob_alpha_001.png" id="1_32m57"]
-[ext_resource type="Texture2D" uid="uid://vx2qy6bnqk2j" path="res://art/mob_alpha_002.png" id="2_8s5vy"]
+[ext_resource type="Texture2D" uid="uid://y510uawgjn7l" path="res://art/mob_alpha_001.png" id="1_32m57"]
+[ext_resource type="Texture2D" uid="uid://5eh3cyebtpej" path="res://art/mob_alpha_002.png" id="2_8s5vy"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_twygb"]
 animations = [{
