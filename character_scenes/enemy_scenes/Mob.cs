@@ -7,7 +7,7 @@ public partial class Mob : CharacterBody2D, Enemy
 	Area2D player;
 	NavigationAgent2D navigationAgent;
 	[Export]
-	int MovementSpeed = 400;
+	int MovementSpeed = 100;
 	
 	int Damage = 10;
 	private EnemyHealth _health;
