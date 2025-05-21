@@ -28,3 +28,8 @@ User Interface
 - Main menu
 
 Upgrades
+
+# Refactorization
+I should replace Mob scene with a general Enemy scene. It's health logic will be fixed and enemy 
+types will be a variable component that should be easily attached to the Enemy scene like a delegate
+in compositional design.
