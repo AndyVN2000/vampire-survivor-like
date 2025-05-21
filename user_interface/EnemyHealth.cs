@@ -6,6 +6,7 @@ public partial class EnemyHealth : Node
 	
 	private int _maxHealth;
 	private int _currentHealth;
+	public int CurrentHealth => _currentHealth;
 	
 	public EnemyHealth(int maxHealth)
 	{
@@ -13,12 +14,12 @@ public partial class EnemyHealth : Node
 		_currentHealth = maxHealth;
 	}
 	
-	public void changeHealthBy(int amount)
+	public void ChangeHealthBy(int amount)
 	{
 		_currentHealth += amount;
 	}
 	
-	public bool isFull()
+	public bool IsFull()
 	{
 		return _currentHealth == _maxHealth;
 	}

@@ -10,7 +10,12 @@ public partial class Mob : CharacterBody2D, Enemy
 	int MovementSpeed = 400;
 	
 	int Damage = 10;
-	int Health = 100;
+	private EnemyHealth _health;
+	
+	public Mob()
+	{
+		_health = new EnemyHealth(100);
+	}
 	
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -35,11 +40,11 @@ public partial class Mob : CharacterBody2D, Enemy
 	
 	public int GetHealth()
 	{
-		return Health;
+		return _health.CurrentHealth;
 	}
 	
 	public void ChangeHealthBy(int amount)
 	{
-		Health += amount;
+		_health.ChangeHealthBy(amount);
 	}
 }
