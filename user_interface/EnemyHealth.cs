@@ -4,11 +4,11 @@ using System;
 public partial class EnemyHealth : Node
 {
 	
-	int maxHealth { get; set};
-	int currentHealth { get; set};
+	int maxHealth;
+	int currentHealth;
 	
 	public void changeHealthBy(int amount){
-		currentHealth.set(currentHealth.get() + amount);
+		currentHealth += amount;
 	}
 	
 }
