@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-interface Enemy
+public interface Enemy
 {
 	int GetDamage();
 	

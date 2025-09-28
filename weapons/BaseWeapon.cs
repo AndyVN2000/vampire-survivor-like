@@ -1,12 +1,13 @@
 using Godot;
 using System;
+using static Enemy;
 
-public abstract class BaseWeapon : Node
+public abstract partial class BaseWeapon : Node
 {
 	
-	Enemy ComputeEnemyTarget()
+	public virtual Enemy ComputeEnemyTarget()
 	{
-		
+		return null;
 	}
 	
 }
