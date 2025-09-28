@@ -1,6 +1,12 @@
 using Godot;
 using System;
 
-interface BaseWeapon : Node
+public abstract class BaseWeapon : Node
 {
+	
+	Enemy ComputeEnemyTarget()
+	{
+		
+	}
+	
 }
