@@ -1,17 +1,16 @@
 using Godot;
 using System;
+using VampireSurvivorLike.weapons.@interface;
 using static Projectile;
 
-public abstract partial class BaseWeapon : Node
+public abstract partial class BaseWeapon : Node, IWeapon
 {
 	public Player Owner { get; private set; }
 	
-	private string _name;
-	[Export] private PackedScene _projectileScene;
-	private int _range;
-	private float _damage;
-	private float _cooldown;
-	private float _timer;
+	protected string _name;
+	[Export] protected PackedScene _projectileScene;
+	protected float _cooldown;
+	protected float _timer;
 	
 	public override void _Ready()
 	{}

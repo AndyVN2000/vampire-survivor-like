@@ -1,5 +1,7 @@
 using Godot;
 using System;
+using System.Collections.Generic;
+using VampireSurvivorLike.weapons.@interface;
 
 public partial class Player : Area2D
 {
@@ -13,9 +15,16 @@ public partial class Player : Area2D
 	public int maxHealth { get; set; } = 100;
 	[Export]
 	public int currentHealth { get; set; } = 100;
-	
+
+	private List<IWeapon> _weapons;
+
 	public override void _Ready()
-	{}
+	{
+		_weapons = new List<IWeapon>();
+		IWeapon starterWeapon = new BasicWeapon();
+		starterWeapon.Initialize(this);
+		_weapons.Add(starterWeapon);
+	}
 	
 	public override void _Process(double delta)
 	{

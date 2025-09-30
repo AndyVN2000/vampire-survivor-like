@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://de37wo4o17gp3"]
+[gd_scene load_steps=3 format=3 uid="uid://de37wo4o17gp3"]
 
 [ext_resource type="Script" uid="uid://cpo8qt63147k5" path="res://weapons/BasicWeapon.cs" id="1_0t81w"]
+[ext_resource type="PackedScene" uid="uid://crkqdqtio4cuh" path="res://weapons/BasicProjectile.tscn" id="2_ld4mb"]
 
 [node name="BasicWeapon" type="Node"]
 script = ExtResource("1_0t81w")
+_projectileScene = ExtResource("2_ld4mb")
