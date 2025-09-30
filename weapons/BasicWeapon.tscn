@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://de37wo4o17gp3"]
+
+[ext_resource type="Script" uid="uid://cpo8qt63147k5" path="res://weapons/BasicWeapon.cs" id="1_0t81w"]
+
+[node name="BasicWeapon" type="Node"]
+script = ExtResource("1_0t81w")
