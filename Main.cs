@@ -3,7 +3,8 @@ using System;
 
 public partial class Main : Node
 {
-	PackedScene EnemyScene = GD.Load<PackedScene>("res://character_scenes/enemy_scenes/Mob.tscn");
+	[Export]
+	PackedScene EnemyScene;
 	
 	
 	public override void _Ready()
