@@ -18,19 +18,21 @@ public partial class Player : Area2D
 
 	private List<IWeapon> _weapons;
 
+	[Export]
+	public PackedScene _starterWeaponPackedScene;
+
 	public override void _Ready()
 	{
 		_weapons = new List<IWeapon>();
-		IWeapon starterWeapon = new BasicWeapon();
-		starterWeapon.Initialize(this);
-		_weapons.Add(starterWeapon);
+		AddWeapon(_starterWeaponPackedScene);
+		GD.Print("Basic Weapon has been added to player!");
 	}
-	
+
 	public override void _Process(double delta)
 	{
-		
+
 		var velocity = Vector2.Zero; // Player's movement vector
-		
+
 		// Read the movement inputs
 		if (Input.IsActionPressed("move_right"))
 		{
@@ -48,7 +50,7 @@ public partial class Player : Area2D
 		{
 			velocity.Y += 1;
 		}
-		
+
 		var animatedSprite2D = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		if (velocity.Length() > 0)
 		{
@@ -60,10 +62,10 @@ public partial class Player : Area2D
 		{
 			animatedSprite2D.Stop();
 		}
-		
+
 		Position += velocity * (float)delta;
 	}
-	
+
 	/* Something entered the body of the Player.
 	If it is an enemy or enemy projectile, then emit a signal that
 	damage has been taken. */
@@ -72,10 +74,17 @@ public partial class Player : Area2D
 		GD.Print("BODY ENTERED");
 		if (body is Enemy)
 		{
-			var enemy = (Enemy) body;
+			var enemy = (Enemy)body;
 			currentHealth -= enemy.GetDamage();
 			EmitSignal(SignalName.DamageTaken);
 		}
+	}
+
+	public void AddWeapon(PackedScene weaponScene)
+	{
+		IWeapon newWeapon = weaponScene.Instantiate<IWeapon>();
+		newWeapon.Initialize(this);
+		_weapons.Add(newWeapon);
 	}
 	
 }

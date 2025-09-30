@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bn3swm4f0wffl"]
+[gd_scene load_steps=7 format=3 uid="uid://bn3swm4f0wffl"]
 
 [ext_resource type="Script" uid="uid://ddveaylfiyutn" path="res://scenes/character_scenes/player_scenes/Player.cs" id="1_0gj1t"]
 [ext_resource type="Texture2D" uid="uid://dlnbo77tcnqs8" path="res://art/player_0_alpha.png" id="1_ms4p0"]
 [ext_resource type="Texture2D" uid="uid://c5vm1pb01s6h3" path="res://art/player_1_alpha.png" id="2_7ck46"]
+[ext_resource type="PackedScene" uid="uid://de37wo4o17gp3" path="res://weapons/BasicWeapon.tscn" id="2_8d5ac"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rnlwi"]
 animations = [{
@@ -23,6 +24,7 @@ radius = 59.0339
 
 [node name="Player" type="Area2D" groups=["Players"]]
 script = ExtResource("1_0gj1t")
+_starterWeaponPackedScene = ExtResource("2_8d5ac")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-1, 2)
