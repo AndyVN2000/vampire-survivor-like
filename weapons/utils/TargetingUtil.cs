@@ -13,7 +13,7 @@ public partial class TargetingUtil : Node
 		float closesDistance = float.MaxValue;
 		foreach (Node2D enemy in enemies)
 		{
-			float distance = currentPosition.DistanceSquaredTo(enemy.Position);
+			float distance = currentPosition.DistanceSquaredTo(enemy.GlobalPosition);
 			if (closestEnemy == null || distance < closesDistance)
 			{
 				closestEnemy = enemy;
@@ -24,7 +24,7 @@ public partial class TargetingUtil : Node
 
 	public Vector2 ComputeTargetPosition(Node caller, Vector2 currentPosition)
 	{
-		return ComputeClosestEnemy(caller, currentPosition).Position;
+		return ComputeClosestEnemy(caller, currentPosition).GlobalPosition;
 	}
 	
 }
