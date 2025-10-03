@@ -15,11 +15,20 @@ public partial class AttackRange : Area2D
 
 	private void OnBodyEntered(Node2D body)
 	{
-		GD.Print("Something entered attack range");
-
+		// GD.Print("Something entered attack range");
 		if (body is Enemy)
 		{
-			GD.Print("It was an Enemy!");
+			// GD.Print("It was an Enemy!");
+			body.AddToGroup("EnemiesInRange");
+		}
+	}
+
+	private void OnBodyExited(Node2D body)
+	{
+		if (body is Enemy)
+		{
+			// GD.Print("Enemy exited range!");
+			body.RemoveFromGroup("EnemiesInRange");
 		}
 	}
 }

@@ -16,7 +16,7 @@ public partial class Main : Node
 	
 	private void OnEnemySpawnTimerTimeout()
 	{
-		GD.Print("Enemy spawned");
+		// GD.Print("Enemy spawned");
 		
 		Node2D enemy = EnemyScene.Instantiate<Node2D>();
 		

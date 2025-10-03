@@ -20,7 +20,7 @@ public abstract partial class BaseWeapon : Node, IWeapon
 		_timer -= (float)delta;
 		if (_timer <= 0)
 		{
-			GD.Print("Firing shot");
+			// GD.Print("Firing shot");
 			Shoot();
 			_timer = _cooldown;
 		}
