@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdadu8d6pawo2"]
+
+[ext_resource type="Script" uid="uid://b2ob3vlq31nsf" path="res://weapons/utils/AttackRange.cs" id="1_nvp7a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x727p"]
+radius = 500.0
+
+[node name="AttackRange" type="Area2D" groups=["EnemiesInRange"]]
+script = ExtResource("1_nvp7a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_x727p")
+one_way_collision_margin = 128.0
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

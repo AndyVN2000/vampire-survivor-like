@@ -22,6 +22,7 @@ Player
 - Game over when health reaches 0
 - Can auto-attack
 	- Weapon spawns projectiles [DONE]
+	- Can register that enemies enter attack range [DONE]
 	- Projectiles are directed towards enemies on firing
 	- (Optional) Homing projectiles
 	- Projectiles registers first enemy hit

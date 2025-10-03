@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://bn3swm4f0wffl"]
+[gd_scene load_steps=8 format=3 uid="uid://bn3swm4f0wffl"]
 
 [ext_resource type="Script" uid="uid://ddveaylfiyutn" path="res://scenes/character_scenes/player_scenes/Player.cs" id="1_0gj1t"]
 [ext_resource type="Texture2D" uid="uid://dlnbo77tcnqs8" path="res://art/player_0_alpha.png" id="1_ms4p0"]
 [ext_resource type="Texture2D" uid="uid://c5vm1pb01s6h3" path="res://art/player_1_alpha.png" id="2_7ck46"]
 [ext_resource type="PackedScene" uid="uid://de37wo4o17gp3" path="res://weapons/BasicWeapon.tscn" id="2_8d5ac"]
+[ext_resource type="PackedScene" uid="uid://cdadu8d6pawo2" path="res://weapons/utils/AttackRange.tscn" id="5_6bp2w"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_rnlwi"]
 animations = [{
@@ -34,5 +35,7 @@ sprite_frames = SubResource("SpriteFrames_rnlwi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(0.4, 0.4)
 shape = SubResource("CircleShape2D_gvvch")
+
+[node name="AttackRange" parent="." instance=ExtResource("5_6bp2w")]
 
 [connection signal="body_entered" from="." to="." method="OnBodyEntered"]
