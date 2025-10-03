@@ -30,7 +30,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
-"speed": 2.0
+"speed": 4.0
 }]
 
 [node name="BasicProjectile" type="Area2D"]
@@ -42,4 +42,4 @@ shape = SubResource("CircleShape2D_0bj3v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_jllqx")
-frame_progress = 0.233165
+frame_progress = 0.119109
