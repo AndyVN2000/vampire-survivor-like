@@ -82,9 +82,10 @@ public partial class Player : Area2D
 
 	public void AddWeapon(PackedScene weaponScene)
 	{
-		IWeapon newWeapon = weaponScene.Instantiate<IWeapon>();
+		BaseWeapon newWeapon = weaponScene.Instantiate<BaseWeapon>();
 		newWeapon.Initialize(this);
 		_weapons.Add(newWeapon);
+		AddChild(newWeapon);
 	}
 	
 }
