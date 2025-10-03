@@ -10,7 +10,7 @@ Map/stage
 
 Enemies
 - Spawns just beyond the bounds of screen [DONE]
--- Spawn area should follow the position of camera [DONE]
+	- Spawn area should follow the position of camera [DONE]
 - Health [DONE]
 - Can lose health
 - Chases the player [DONE]
@@ -21,6 +21,10 @@ Player
 - Can lose health [DONE]
 - Game over when health reaches 0
 - Can auto-attack
+	- Weapon spawns projectiles [DONE]
+	- Projectiles are directed towards enemies on firing
+	- (Optional) Homing projectiles
+	- Projectiles registers first enemy hit
 
 User Interface
 - Health bar [DONE]
