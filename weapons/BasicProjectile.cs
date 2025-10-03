@@ -14,13 +14,15 @@ public partial class BasicProjectile : Projectile
 		_sprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		_sprite.Play();
 		_targetingUtil = new TargetingUtil();
-		Vector2 targetPosition = _targetingUtil.ComputeTargetPosition(this.Position);
+		Vector2 targetPosition = _targetingUtil.ComputeTargetPosition(this, this.Position);
+		GD.Print("Position of enemy: " + targetPosition);
 		_direction = Position.DirectionTo(targetPosition);
+		GD.Print("Direction of projectile: " + _direction);
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		Position += _direction * (float)delta;
+		Position += _direction;
 	}
 }

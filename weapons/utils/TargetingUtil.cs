@@ -6,13 +6,9 @@ using static Enemy;
 public partial class TargetingUtil : Node
 {
 
-	public void _Ready()
+	public Node2D ComputeClosestEnemy(Node caller, Vector2 currentPosition)
 	{
-	}
-
-	public Node2D ComputeClosestEnemy(Vector2 currentPosition)
-	{
-		var enemies = GetTree().GetNodesInGroup("EnemiesInRange");
+		var enemies = caller.GetTree().GetNodesInGroup("EnemiesInRange");
 		Node2D closestEnemy = null;
 		float closesDistance = float.MaxValue;
 		foreach (Node2D enemy in enemies)
@@ -22,14 +18,13 @@ public partial class TargetingUtil : Node
 			{
 				closestEnemy = enemy;
 			}
-
 		}
 		return closestEnemy;
 	}
 
-	public Vector2 ComputeTargetPosition(Vector2 currentPosition)
+	public Vector2 ComputeTargetPosition(Node caller, Vector2 currentPosition)
 	{
-		return ComputeClosestEnemy(currentPosition).Position;
+		return ComputeClosestEnemy(caller, currentPosition).Position;
 	}
 	
 }
