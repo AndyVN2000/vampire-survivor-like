@@ -51,3 +51,11 @@ Ideas of tracking enemy position:
 I should replace Mob scene with a general Enemy scene. It's health logic will be fixed and enemy 
 types will be a variable component that should be easily attached to the Enemy scene like a delegate
 in compositional design.
+
+
+# License
+
+- **Code**: Licensed under the GNU General Public License v3.0 (GPL-3.0).  
+  See [LICENSE](LICENSE) for details.  
+- **Assets (art, sound, music, etc.)**: Licensed under Creative Commons Attribution-NonCommercial 4.0 International (CC-BY-NC 4.0).  
+  See [LICENSE_ASSETS](LICENSE_ASSETS) for details.
