@@ -6,9 +6,6 @@
 
 [node name="TestTargetingUtil" type="Node"]
 
-[node name="Player" parent="." instance=ExtResource("1_x4bd5")]
-position = Vector2(576, 320)
-
 [node name="Mob0" parent="." instance=ExtResource("2_14ksu")]
 position = Vector2(640, 320)
 MovementSpeed = 0
@@ -26,5 +23,8 @@ position = Vector2(448, 320)
 
 [node name="Node2D2" type="Node2D" parent="."]
 position = Vector2(576, 480)
+
+[node name="Player" parent="." instance=ExtResource("1_x4bd5")]
+position = Vector2(576, 320)
 
 [connection signal="timeout" from="TestTimer" to="TestTimer" method="OnTimeout"]

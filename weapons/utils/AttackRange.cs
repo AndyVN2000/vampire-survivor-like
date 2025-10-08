@@ -16,7 +16,7 @@ public partial class AttackRange : Area2D
 	private void OnBodyEntered(Node2D body)
 	{
 		// GD.Print("Something entered attack range");
-		if (body.GetType() == typeof(Enemy))
+		if (body is Enemy)
 		{
 			// GD.Print("It was an Enemy!");
 			body.AddToGroup("EnemiesInRange");
