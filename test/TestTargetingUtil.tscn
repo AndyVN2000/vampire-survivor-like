@@ -12,6 +12,7 @@ MovementSpeed = 0
 
 [node name="TestTimer" type="Timer" parent="."]
 wait_time = 3.0
+autostart = true
 script = ExtResource("3_7igb7")
 _mobScene = ExtResource("2_14ksu")
 

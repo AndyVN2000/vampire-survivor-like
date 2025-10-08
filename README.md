@@ -24,7 +24,7 @@ Player
 	- Weapon spawns projectiles [DONE]
 	- Can register that enemies enter attack range [DONE]
 	- Projectiles are directed towards enemies on firing [DONE]
-		- Currently, it seems like the TargetingUtil prioritizes the newest enemy rather than the closest enemy.
+		- Currently, it seems like the TargetingUtil prioritizes the newest enemy rather than the closest enemy. [CORRECTED]
 		- Another issue: Player is automatically counted as a "EnemyInRange" [CORRECTED]
 	- (Optional) Homing projectiles
 	- Projectiles registers first enemy hit
