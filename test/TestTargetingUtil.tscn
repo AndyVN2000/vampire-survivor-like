@@ -1,3 +1,30 @@
-[gd_scene format=3 uid="uid://pqidjemo2mtq"]
+[gd_scene load_steps=4 format=3 uid="uid://pqidjemo2mtq"]
+
+[ext_resource type="PackedScene" uid="uid://bn3swm4f0wffl" path="res://scenes/character_scenes/player_scenes/player.tscn" id="1_x4bd5"]
+[ext_resource type="PackedScene" uid="uid://drymxlgg4d4cl" path="res://scenes/character_scenes/enemy_scenes/Mob.tscn" id="2_14ksu"]
+[ext_resource type="Script" uid="uid://dcsrjl35bifr" path="res://test/TestTimer.cs" id="3_7igb7"]
 
 [node name="TestTargetingUtil" type="Node"]
+
+[node name="Player" parent="." instance=ExtResource("1_x4bd5")]
+position = Vector2(576, 320)
+
+[node name="Mob0" parent="." instance=ExtResource("2_14ksu")]
+position = Vector2(640, 320)
+MovementSpeed = 0
+
+[node name="TestTimer" type="Timer" parent="."]
+wait_time = 3.0
+script = ExtResource("3_7igb7")
+_mobScene = ExtResource("2_14ksu")
+
+[node name="Node2D0" type="Node2D" parent="."]
+position = Vector2(576, 232)
+
+[node name="Node2D1" type="Node2D" parent="."]
+position = Vector2(448, 320)
+
+[node name="Node2D2" type="Node2D" parent="."]
+position = Vector2(576, 480)
+
+[connection signal="timeout" from="TestTimer" to="TestTimer" method="OnTimeout"]
