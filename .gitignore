@@ -10,4 +10,4 @@
 
 *.import
 
-Vampire Survivor-like.csproj*
+*.csproj.old*
