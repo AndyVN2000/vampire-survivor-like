@@ -3,6 +3,13 @@ A game based on Vampire Survivors. Developed in Godot
 
 # TODO list
 
+## URGENT
+
+- Refactor so a `Weapon` object first searches for enemies. If none found, then it should not `shoot()`.
+  Only `shoot()` if an enemy is found in range.
+
+## Features
+
 Map/stage
 - Basic ground texture [DONE]
 - Map bounds
